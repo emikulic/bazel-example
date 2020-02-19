@@ -1,4 +1,4 @@
-load("@rules_cc//cc:defs.bzl", "cc_binary", "cc_library")
+load("@rules_cc//cc:defs.bzl", "cc_binary", "cc_library", "cc_test")
 
 cc_binary(
     name = "hello",
@@ -14,4 +14,13 @@ cc_library(
     name = "square",
     srcs = ["square.cc"],
     hdrs = ["square.h"],
+)
+
+cc_test(
+    name = "square_test",
+    srcs = ["square_test.cc"],
+    deps = [
+        ":square",
+        "@com_google_googletest//:gtest_main",
+    ],
 )
