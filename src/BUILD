@@ -1,4 +1,4 @@
-load("@rules_cc//cc:defs.bzl", "cc_binary")
+load("@rules_cc//cc:defs.bzl", "cc_binary", "cc_library")
 
 cc_binary(
     name = "hello",
@@ -8,4 +8,10 @@ cc_binary(
         "@com_google_absl//absl/flags:parse",
         "@com_google_absl//absl/strings:str_format",
     ],
+)
+
+cc_library(
+    name = "square",
+    srcs = ["square.cc"],
+    hdrs = ["square.h"],
 )
