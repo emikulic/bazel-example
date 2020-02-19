@@ -1,9 +1,16 @@
 load("@rules_cc//cc:defs.bzl", "cc_binary", "cc_library", "cc_test")
 
+cc_test(
+    name = "asan_test",
+    srcs = ["asan_test.cc"],
+    malloc = "//:malloc",
+    deps = ["@com_google_googletest//:gtest_main"],
+)
+
 cc_binary(
     name = "hello",
     srcs = ["hello.cc"],
-    malloc = "@com_google_tcmalloc//tcmalloc",
+    malloc = "//:malloc",
     deps = [
         "@com_google_absl//absl/flags:flag",
         "@com_google_absl//absl/flags:parse",
