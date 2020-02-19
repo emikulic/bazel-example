@@ -24,3 +24,12 @@ cc_test(
         "@com_google_googletest//:gtest_main",
     ],
 )
+
+cc_test(
+    name = "square_benchmark",
+    srcs = ["square_benchmark.cc"],
+    deps = [
+        ":square",
+        "@com_github_google_benchmark//:benchmark_main",
+    ],
+)
