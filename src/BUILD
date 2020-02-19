@@ -3,6 +3,7 @@ load("@rules_cc//cc:defs.bzl", "cc_binary", "cc_library", "cc_test")
 cc_binary(
     name = "hello",
     srcs = ["hello.cc"],
+    malloc = "@com_google_tcmalloc//tcmalloc",
     deps = [
         "@com_google_absl//absl/flags:flag",
         "@com_google_absl//absl/flags:parse",

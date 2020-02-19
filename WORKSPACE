@@ -23,3 +23,9 @@ http_archive(
     strip_prefix = "benchmark-master",
     urls = ["https://github.com/google/benchmark/archive/master.tar.gz"],
 )
+
+http_archive(
+    name = "com_google_tcmalloc",
+    strip_prefix = "tcmalloc-master",
+    urls = ["https://github.com/google/tcmalloc/archive/master.tar.gz"],
+)
