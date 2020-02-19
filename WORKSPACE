@@ -29,3 +29,15 @@ http_archive(
     strip_prefix = "tcmalloc-master",
     urls = ["https://github.com/google/tcmalloc/archive/master.tar.gz"],
 )
+
+http_archive(
+    name = "com_google_glog",
+    strip_prefix = "glog-master",
+    urls = ["https://github.com/google/glog/archive/master.tar.gz"],
+)
+
+http_archive(
+    name = "com_github_gflags_gflags",
+    strip_prefix = "gflags-master",
+    urls = ["https://github.com/gflags/gflags/archive/master.tar.gz"],
+)
