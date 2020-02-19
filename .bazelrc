@@ -1,5 +1,7 @@
 build --cxxopt=-std=c++17
 build --cxxopt=-fno-exceptions
+# For googletest to use absl.
+build --define=absl=1
 
 common:asan --copt=-fsanitize=address
 common:asan --copt=-DADDRESS_SANITIZER
